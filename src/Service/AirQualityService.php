@@ -3,6 +3,7 @@
 namespace App\Service;
 
 use Symfony\Contracts\HttpClient\HttpClientInterface;
+use App\Helper\ArrayHelper;
 
 class AirQualityService
 {
@@ -34,9 +35,8 @@ class AirQualityService
      */
     private $url = 'http://api.gios.gov.pl/pjp-api/rest/station/findAll';
 
-		public function __construct(HttpClientInterface $client)
-		{
-			$this->client = $client;
-		}
-
+    public function __construct(HttpClientInterface $client)
+    {
+        $this->client = $client;
+    }
 }
