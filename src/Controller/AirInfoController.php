@@ -6,15 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class BrandNewController extends AbstractController
+class AirInfoController extends AbstractController
 {
     /**
-     * @Route("/brand/new", name="brand_new")
+     * @Route("air/info/list", name="air_info_list")
      */
     public function index(): Response
     {
-        return $this->render('brand_new/index.html.twig', [
-            'controller_name' => 'BrandNewController',
-        ]);
+        return $this->render('air_info/index.html.twig', []);
     }
 }
