@@ -11,8 +11,16 @@ class AirInfoController extends AbstractController
     /**
      * @Route("air/info/list", name="air_info_list")
      */
-    public function index(): Response
+    public function getAllCities(): Response
     {
         return $this->render('air_info/index.html.twig', []);
+    }
+
+    /**
+     * @Route("/air/info/show/{city}/stations", name="air_info_show_stations")
+     */
+    public function getOneCity(): Response
+    {
+        return $this->render('show_stations/index.html.twig', []);
     }
 }
