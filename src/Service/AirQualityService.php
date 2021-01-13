@@ -26,7 +26,7 @@ class AirQualityService
      *
      * @var object
      */
-    private $helper;
+    private $arrayHelper;
 
     /**
      * api url
@@ -35,7 +35,7 @@ class AirQualityService
      */
     private $url = 'http://api.gios.gov.pl/pjp-api/rest/station/findAll';
 
-    public function __construct(HttpClientInterface $client)
+    public function __construct(HttpClientInterface $client, ArrayHelper $arrayHelper)
     {
         $this->client = $client;
         $this->arrayHelper = $arrayHelper;
