@@ -69,4 +69,23 @@ class AirQualityService
 
         return $list;
     }
+
+      /**
+     * fetch one city witch air stations
+     *
+     * @param string $city
+     * @return array
+     */
+    public function fetchOneCity(string $city): array
+    {
+      $response = $this->client->request(
+          self::METHOD_GET,
+          $this->url
+      );
+
+      $content = $response->toArray();
+      // create in Arrayhelper method for serach through multidimensional array
+
+      return $city;
+    }
 }
