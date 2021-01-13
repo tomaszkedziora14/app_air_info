@@ -41,7 +41,7 @@ class AirQualityService
         $this->arrayHelper = $arrayHelper;
     }
 
-      /**
+    /**
      * fetch all cities list
      *
      * @return array
@@ -71,7 +71,7 @@ class AirQualityService
         return $list;
     }
 
-      /**
+    /**
      * fetch one city witch air stations
      *
      * @param string $city
