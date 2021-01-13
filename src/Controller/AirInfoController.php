@@ -28,6 +28,7 @@ class AirInfoController extends AbstractController
      * @Route("/air/info/show/{city}/stations", name="air_info_show_stations")
      *
      * @param AirQualityService $airQualityApiService
+     * @param string $city
      * @return Response;
      */
     public function getOneCity(AirQualityService $airQualityApiService, $city): Response
