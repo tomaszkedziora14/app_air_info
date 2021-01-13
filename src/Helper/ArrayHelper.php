@@ -2,10 +2,9 @@
 
 namespace App\Helper;
 
-
 class ArrayHelper
 {
-	public function search(string $search,array $data): array
-	{
-	}
+  public function search(string $search,array $data): array
+  {
+  }
 }
