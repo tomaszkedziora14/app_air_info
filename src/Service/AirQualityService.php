@@ -39,4 +39,34 @@ class AirQualityService
     {
         $this->client = $client;
     }
+
+      /**
+     * fetch all cities list
+     *
+     * @return array
+     */
+    public function fetchAllCities(): array
+    {
+        $response = $this->client->request(
+            self::METHOD_GET,
+            $this->url
+        );
+
+        $content = $response->toArray();
+        $cities = [];
+
+        foreach($content as $data){
+          if((is_array($data['city']))){
+            foreach($data['city'] as $city){
+              if(is_string($city)){
+               $cities[] = $city;
+              }
+            }
+          }
+        }
+
+        $list = array_unique($cities);
+
+        return $list;
+    }
 }
