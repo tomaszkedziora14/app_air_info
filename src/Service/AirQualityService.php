@@ -33,4 +33,10 @@ class AirQualityService
      * @var array
      */
     private $url = 'http://api.gios.gov.pl/pjp-api/rest/station/findAll';
+
+		public function __construct(HttpClientInterface $client)
+		{
+			$this->client = $client;
+		}
+
 }
