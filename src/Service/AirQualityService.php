@@ -38,6 +38,7 @@ class AirQualityService
     public function __construct(HttpClientInterface $client)
     {
         $this->client = $client;
+        $this->arrayHelper = $arrayHelper;
     }
 
       /**
@@ -84,7 +85,7 @@ class AirQualityService
       );
 
       $content = $response->toArray();
-      // create in Arrayhelper method for serach through multidimensional array
+      $city = $this->arrayHelper->searchThroughArray($city,$content);
 
       return $city;
     }
