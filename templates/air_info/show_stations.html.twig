@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Cities Air Station {% endblock %}
+{% block title %} City witch air stations {% endblock %}
 
 {% block body %}
     <div class="container">
-        <h2>Cities Air Station</h2>
+        <h2>City witch air stations</h2>
         <table class="table table-bordered">
             <thead>
             <tr>
@@ -12,11 +12,11 @@
             </tr>
             </thead>
             <tbody>
-
+            {% for key, city in cityStations %}
                     <tr>
-                        <td>bootstrap tabella</td>
+                        <td>{{city.stationName}}</td>
                     </tr>
-
+            {% endfor %}
             </tbody>
         </table>
     </div>

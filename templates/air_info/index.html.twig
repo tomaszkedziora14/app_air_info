@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Cities Air Station {% endblock %}
+{% block title %} All cities witch stations {% endblock %}
 
 {% block body %}
     <div class="container">
@@ -12,11 +12,11 @@
             </tr>
             </thead>
             <tbody>
-
+            {% for key, city in citiesWitchStations %}
                     <tr>
-                        <td>bootstrap tabella</td>
+                        <td>{{city}}<a href={{ path('air_info_show_stations', {'city': city})}}>zobacz stacje</a></td>
                     </tr>
-
+            {% endfor %}
             </tbody>
         </table>
     </div>
