@@ -17,7 +17,7 @@ class AirInfoController extends AbstractController
      */
     public function getAllCities(AirQualityService $airQualityApiService): Response
     {
-        $citiesWitchStations = $airQualityApiService->fetchAllCity();
+        $citiesWitchStations = $airQualityApiService->fetchAllCities();
 
         return $this->render('air_info/index.html.twig', [
             'citiesWitchStations' => $citiesWitchStations,
