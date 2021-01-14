@@ -31,7 +31,7 @@ class AirQualityService
     /**
      * api url
      *
-     * @var array
+     * @var string
      */
     private $url = 'http://api.gios.gov.pl/pjp-api/rest/station/findAll';
 
