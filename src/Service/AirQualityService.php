@@ -31,9 +31,9 @@ class AirQualityService
     /**
      * api url
      *
-     * @var string
+     * @var array
      */
-    private $url = 'http://api.gios.gov.pl/pjp-api/rest/station/findAll';
+    private $url = ['http://api.gios.gov.pl/pjp-api/rest/station/findAll'];
 
     public function __construct(HttpClientInterface $client, ArrayHelper $arrayHelper)
     {
@@ -50,7 +50,7 @@ class AirQualityService
     {
         $response = $this->client->request(
             self::METHOD_GET,
-            $this->url
+            $this->url[0]
         );
 
         $content = $response->toArray();
@@ -81,7 +81,7 @@ class AirQualityService
     {
       $response = $this->client->request(
           self::METHOD_GET,
-          $this->url
+          $this->url[0]
       );
 
       $content = $response->toArray();
