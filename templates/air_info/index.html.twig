@@ -9,12 +9,14 @@
             <thead>
             <tr>
                 <th>City</th>
+                <th>go to stations</th>
             </tr>
             </thead>
             <tbody>
             {% for key, city in citiesWitchStations %}
                     <tr>
-                        <td>{{city}}<a href={{ path('air_info_show_stations', {'city': city})}}>zobacz stacje</a></td>
+                        <td>{{city}}</td>
+                        <td><a href={{ path('air_info_show_stations', {'city': city})}}>show stations</a></td>
                     </tr>
             {% endfor %}
             </tbody>
