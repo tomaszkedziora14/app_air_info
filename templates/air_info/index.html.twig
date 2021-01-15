@@ -13,7 +13,7 @@
             </tr>
             </thead>
             <tbody>
-            {% for key, city in citiesWitchStations %}
+            {% for key, city in citiesList %}
                     <tr>
                         <td>{{city}}</td>
                         <td><a href={{ path('air_info_show_stations', {'city': city})}}>show stations</a></td>

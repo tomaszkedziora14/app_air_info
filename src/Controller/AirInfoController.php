@@ -17,10 +17,10 @@ class AirInfoController extends AbstractController
      */
     public function getAllCities(AirQualityService $airQualityApiService): Response
     {
-        $citiesWitchStations = $airQualityApiService->fetchAllCities();
+        $citiesList = $airQualityApiService->fetchAllCities();
 
         return $this->render('air_info/index.html.twig', [
-            'citiesWitchStations' => $citiesWitchStations,
+            'citiesList' => $citiesList,
         ]);
     }
 
@@ -33,10 +33,10 @@ class AirInfoController extends AbstractController
      */
     public function getOneCity(AirQualityService $airQualityApiService, $city): Response
     {
-        $cityStations = $airQualityApiService->fetchOneCity($city);
+        $cityWitchStations = $airQualityApiService->fetchOneCity($city);
 
         return $this->render('air_info/show_stations.html.twig', [
-            'cityStations' => $cityStations,
+            'cityStations' => $cityWitchStations,
         ]);
     }
 }
