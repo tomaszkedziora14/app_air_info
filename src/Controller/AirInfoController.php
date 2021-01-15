@@ -36,7 +36,7 @@ class AirInfoController extends AbstractController
         $cityWitchStations = $airQualityApiService->fetchOneCity($city);
 
         return $this->render('air_info/show_stations.html.twig', [
-            'cityStations' => $cityWitchStations,
+            'cityWitchStations' => $cityWitchStations,
         ]);
     }
 }
