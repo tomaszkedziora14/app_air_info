@@ -10,7 +10,7 @@ use App\Service\AirQualityService;
 class AirInfoController extends AbstractController
 {
     /**
-     *  helper for array
+     * api service
      *
      * @var object
      */
