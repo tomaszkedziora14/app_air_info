@@ -58,9 +58,9 @@ class AirQualityService
 
         foreach($content as $data){
           if((is_array($data['city']))){
-            foreach($data['city'] as $city){
-              if(is_string($city)){
-               $cities[] = $city;
+            foreach($data['city'] as $cityName){
+              if(is_string($cityName)){
+               $cities[] = $cityName;
               }
             }
           }
