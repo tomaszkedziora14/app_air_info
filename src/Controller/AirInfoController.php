@@ -10,14 +10,26 @@ use App\Service\AirQualityService;
 class AirInfoController extends AbstractController
 {
     /**
+     *  helper for array
+     *
+     * @var object
+     */
+    private $airQualityApiService;
+
+    public function __construct(AirQualityService $airQualityApiService)
+    {
+      $this->airQualityService = $airQualityApiService;
+    }
+
+    /**
      * @Route("/air/info/list", name="air_info_list")
      *
      * @param AirQualityService $airQualityApiService
      * @return Response;
      */
-    public function getAllCities(AirQualityService $airQualityApiService): Response
+    public function getAllCities(): Response
     {
-        $citiesList = $airQualityApiService->fetchAllCities();
+        $citiesList = $this->airQualityService->fetchAllCities();
 
         return $this->render('air_info/index.html.twig', [
             'citiesList' => $citiesList,
@@ -31,9 +43,9 @@ class AirInfoController extends AbstractController
      * @param string $city
      * @return Response;
      */
-    public function getOneCity(AirQualityService $airQualityApiService, $city): Response
+    public function getOneCity($city): Response
     {
-        $cityWitchStations = $airQualityApiService->fetchOneCity($city);
+        $cityWitchStations = $this->airQualityService->fetchOneCity($city);
 
         return $this->render('air_info/show_stations.html.twig', [
             'cityWitchStations' => $cityWitchStations,
