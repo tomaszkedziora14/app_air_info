@@ -42,7 +42,7 @@ class AirQualityService
     }
 
     /**
-     * fetch all cities with stations
+     * fetch all cities with air stations
      *
      * @return array
      */
