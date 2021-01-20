@@ -7,6 +7,13 @@ namespace App\Service;
 Interface AirQualityInterface
 {
     /**
+     * method GET
+     *
+     * @var string
+     */
+    const METHOD_GET = 'GET';
+    
+    /**
      * fetch all cities list
      *
      * @return array
