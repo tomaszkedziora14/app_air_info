@@ -43,7 +43,7 @@ class AirQualityService implements AirQualityInterface
     }
 
     /**
-     * fetch all cities list
+     * fetch all cities with air stations
      *
      * @return array
      */
