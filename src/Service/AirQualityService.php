@@ -2,10 +2,11 @@
 
 namespace App\Service;
 
+use App\Service\AirQualityInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 use App\Helper\ArrayHelper;
 
-class AirQualityService
+class AirQualityService implements AirQualityInterface
 {
     /**
      * method GET

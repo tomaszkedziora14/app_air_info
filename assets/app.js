@@ -6,8 +6,18 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+// import './styles/app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // start the Stimulus application
 import './bootstrap';
+
+import Vue from 'vue';
+import App from './components/Example';
+
+import '../css/app.css';
+
+new Vue({
+    el: '#app',
+    render: h => h(App)
+});
