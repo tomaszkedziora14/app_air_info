@@ -11,7 +11,7 @@ Interface AirQualityInterface
      *
      * @return array
      */
-    public function fetchAllCities();
+    public function fetchAllCities(): array;
 
     /**
      * fetch one city witch air stations
@@ -19,5 +19,5 @@ Interface AirQualityInterface
      * @param string $city
      * @return array
      */
-    public function fetchOneCity(string $city);
+    public function fetchOneCity(string $city): array;
 }
