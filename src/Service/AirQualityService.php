@@ -67,9 +67,9 @@ class AirQualityService implements AirQualityInterface
           }
         }
 
-        $list = array_unique($cities);
+        $cityList = array_unique($cities);
 
-        return $list;
+        return $cityList;
     }
 
     /**
@@ -86,8 +86,8 @@ class AirQualityService implements AirQualityInterface
       );
 
       $content = $response->toArray();
-      $city = $this->arrayHelper->searchThroughArray($city,$content);
+      $cityWitchStations = $this->arrayHelper->searchThroughArray($city,$content);
 
-      return $city;
+      return $cityWitchStations;
     }
 }
