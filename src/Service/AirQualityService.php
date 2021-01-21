@@ -67,9 +67,9 @@ class AirQualityService implements AirQualityInterface
           }
         }
 
-        $cityList = array_unique($cities);
+        $citiesList = array_unique($cities);
 
-        return $cityList;
+        return $citiesList;
     }
 
     /**
