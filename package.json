@@ -19,10 +19,12 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "bootstrap": "^4.5.3",
+        "bootstrap": "^4.6.0",
         "vue": "^2.6.12",
         "vue-loader": "^15.9.6",
+        "vue-router": "^3.4.9",
         "vue-template-compiler": "^2.6.12",
+        "vuetify": "^2.4.2",
         "yarn": "^1.22.10"
     }
 }
