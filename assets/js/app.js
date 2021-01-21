@@ -8,6 +8,7 @@ import App from './components/App';
 console.log('ddd');
 
 new Vue({
+  el: '#app',
   template: '<App />',
   components: { App },
 })
