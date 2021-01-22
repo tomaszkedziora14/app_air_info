@@ -18,7 +18,7 @@ class AirInfoController extends AbstractController
 
     public function __construct(AirQualityInterface $airQualityApiService)
     {
-      $this->airQualityService = $airQualityApiService;
+        $this->airQualityService = $airQualityApiService;
     }
 
     /**
