@@ -80,14 +80,14 @@ class AirQualityService implements AirQualityInterface
      */
     public function fetchOneCity(string $city): array
     {
-      $response = $this->client->request(
-          self::METHOD_GET,
-          $this->url[0]
-      );
+        $response = $this->client->request(
+            self::METHOD_GET,
+            $this->url[0]
+        );
 
-      $content = $response->toArray();
-      $cityWitchStations = $this->arrayHelper->searchThroughArray($city,$content);
+        $content = $response->toArray();
+        $cityWitchStations = $this->arrayHelper->searchThroughArray($city,$content);
 
-      return $cityWitchStations;
+        return $cityWitchStations;
     }
 }
