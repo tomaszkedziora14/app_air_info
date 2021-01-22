@@ -1,11 +1,8 @@
 <template lang="pug">
-p {{ greeting }} World!
-other-component
+<p> {{ greeting }} World! </p>
 </template>
 
 <script>
-  import OtherComponent from "./OtherComponent.vue"
-
   export default {
     components: {
       OtherComponent
@@ -22,5 +19,5 @@ other-component
 <style lang="stylus">
   p
   font-size 2em
-             text-align center
+  text-align center
 </style>
