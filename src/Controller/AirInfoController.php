@@ -24,7 +24,6 @@ class AirInfoController extends AbstractController
     /**
      * @Route("/air/info/list", name="air_info_list")
      *
-     * @param AirQualityInterface $airQualityApiService
      * @return Response
      */
     public function getAllCities(): Response
@@ -39,7 +38,6 @@ class AirInfoController extends AbstractController
     /**
      * @Route("/air/info/show/{city}/stations", name="air_info_show_stations")
      *
-     * @param AirQualityService $airQualityApiService
      * @param string $city
      * @return Response
      */
