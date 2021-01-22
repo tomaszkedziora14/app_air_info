@@ -5,7 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Service\AirQualityService;
+use App\Service\AirQualityInterface;
 
 class AirInfoController extends AbstractController
 {
@@ -16,7 +16,7 @@ class AirInfoController extends AbstractController
      */
     private $airQualityApiService;
 
-    public function __construct(AirQualityService $airQualityApiService)
+    public function __construct(AirQualityInterface $airQualityApiService)
     {
       $this->airQualityService = $airQualityApiService;
     }
@@ -24,8 +24,8 @@ class AirInfoController extends AbstractController
     /**
      * @Route("/air/info/list", name="air_info_list")
      *
-     * @param AirQualityService $airQualityApiService
-     * @return Response;
+     * @param AirQualityInterface $airQualityApiService
+     * @return Response
      */
     public function getAllCities(): Response
     {
@@ -41,7 +41,7 @@ class AirInfoController extends AbstractController
      *
      * @param AirQualityService $airQualityApiService
      * @param string $city
-     * @return Response;
+     * @return Response
      */
     public function getOneCity($city): Response
     {

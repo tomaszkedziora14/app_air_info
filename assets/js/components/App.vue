@@ -1,16 +1,26 @@
-<template>
-   <div>
-       <p>This is an example of a new components in VueJs</p>
-   </div>
+<template lang="pug">
+p {{ greeting }} World!
+other-component
 </template>
 
 <script>
-   export default {
-       data: () => ({
-           counter: 0
-       })
-   }
+  import OtherComponent from "./OtherComponent.vue"
+
+  export default {
+    components: {
+      OtherComponent
+    },
+
+    data() {
+      return {
+        greeting: "Hello"
+      }
+    }
+  }
 </script>
 
-<style>
+<style lang="stylus">
+  p
+  font-size 2em
+             text-align center
 </style>
